@@ -21,63 +21,50 @@ const posts = [
 export default function Blog() {
   return (
     <>
-     
+      {/* BLOG SECTION */}
       <section className="py-5">
         <div className="container">
-
           <div className="text-center mb-5">
             <h2 className="fw-bold">Caring is the new marketing</h2>
 
             <p className="text-muted mx-auto" style={{ maxWidth: "600px" }}>
-            The Nexcent blog is the best place to read about the latest membership insights,
-            trends and more. See who's joining the community, read about how our community
-            are increasing their membership income and lot's more.
+              The Nexcent blog is the best place to read about the latest
+              membership insights, trends and more. See who's joining the
+              community, read about how our community are increasing their
+              membership income and lot's more.
             </p>
           </div>
 
           <div className="row g-4">
             {posts.map((post, i) => (
-              <div className="col-lg-4 col-md-6" key={i}>
-
-                <div className="position-relative">
-
+              <div className="col-lg-4 col-md-6 col-12" key={i}>
+                <div className="card h-100 shadow-sm border-0">
                   <img
                     src={post.img}
                     alt={post.title}
-                    className="img-fluid rounded"
+                    className="card-img-top"
                   />
 
-                  <div className="card shadow position-absolute top-100 start-50 translate-middle w-75">
+                  <div className="card-body text-center">
+                    <p className="fw-bold">{post.title}</p>
 
-                    <div className="card-body text-center">
-
-                      <p className="fw-bold">{post.title}</p>
-
-                      <a
-                        href="#"
-                        className="text-success fw-semibold text-decoration-none"
-                      >
-                        Readmore →
-                      </a>
-
-                    </div>
-
+                    <a
+                      href="#"
+                      className="text-success fw-semibold text-decoration-none"
+                    >
+                      Readmore →
+                    </a>
                   </div>
-
                 </div>
-
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
       {/* CTA SECTION */}
-      <section className="py-5 text-center mt-5" style={{ background: "#f5f7fa" }}>
-
+      <section className="py-5 text-center" style={{ background: "#f5f7fa" }}>
         <div className="container">
-
           <h2
             className="fw-bold mb-4 mx-auto"
             style={{ maxWidth: "700px", fontSize: "2.8rem" }}
@@ -85,7 +72,7 @@ export default function Blog() {
             Pellentesque suscipit fringilla libero eu.
           </h2>
 
-           <button
+          <button
             className="btn px-5 py-3 fw-semibold"
             style={{
               backgroundColor: "#3d9a4e",
@@ -95,9 +82,7 @@ export default function Blog() {
           >
             Get a Demo →
           </button>
-
         </div>
-
       </section>
     </>
   );

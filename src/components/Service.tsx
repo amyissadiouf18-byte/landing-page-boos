@@ -32,9 +32,9 @@ const Service: React.FC = () => {
   ];
 
   return (
-    <section className="py-5">
+    <section className="py-5 mb-5">
       <div className="container">
-        <div className="text-center mb-5">
+        <div className="text-center py-5 mb-5">
           <h2>Our Clients</h2>
           <p>We have been working with some Fortune 500+ clients</p>
 
@@ -52,7 +52,7 @@ const Service: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-center mb-4">
+        <div className="text-center py-5 mb-5">
           <h2>
             Manage your entire community <br />
             in a single system
